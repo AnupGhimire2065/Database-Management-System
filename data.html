@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Development</title>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    header { background-color: #f2f2f2; padding: 10px 20px; border-bottom: 1px solid #ccc; }
+    h1 { color: #333; }
+    main { padding: 20px; }
+    ol, ul { margin: 0; padding: 0; }
+    ol > li { list-style-type: decimal; margin-bottom: 10px; }
+    ul > li { list-style-type: disc; margin-left: 20px; margin-bottom: 10px; }
+    .toggle-btn {
+      display: block;
+      cursor: pointer;
+      padding: 5px 0;
+      font-weight: bold;
+    }
+    .content-section {
+      border: 1px solid #eee;
+      padding: 10px;
+      margin: 5px 0 15px 20px;
+      background-color: #f9f9f9;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Database Management System (DBMS)</h1>
+  </header>
+  <main>
+    <ol>
+      <li>
+        <span class="toggle-btn">Data</span>
+        <div class="content-section">
+          <h3>What is Data?</h3>
+          <p>In the context of computer science and databases, **data** refers to raw facts, figures, or unorganized information that has no specific meaning on its own. It can be in various forms such as numbers, text, images, audio, or video. Data needs to be processed, organized, and structured to become meaningful information.</p>
+          <p>For example, "25", "Kathmandu", and "Apple" are individual pieces of data. When these are organized as "Age: 25, City: Kathmandu, Favorite Fruit: Apple", they become meaningful information about a person.</p>
+        </div>
+        <ul>
+          <li>
+            <span class="toggle-btn">Data Types</span>
+            <div class="content-section">
+              <h3>What are Data Types?</h3>
+              <p>**Data types** classify the kind of values that a variable or column can hold in a database. They determine the operations that can be performed on the data and the amount of storage space required. Using appropriate data types helps maintain data integrity and optimize database performance.</p>
+              <h4>Common Data Types in Databases:</h4>
+              <ul>
+                <li>**Numeric Data Types:**
+                  <ul>
+                    <li>**INT (Integer):** Stores whole numbers (e.g., 10, -500).</li>
+                    <li>**FLOAT/DOUBLE:** Stores numbers with decimal points (e.g., 3.14, 99.99).</li>
+                    <li>**DECIMAL/NUMERIC:** Stores exact numeric values, often used for monetary data to avoid precision issues (e.g., 123.45).</li>
+                  </ul>
+                </li>
+                <li>**String/Character Data Types:**
+                  <ul>
+                    <li>**VARCHAR(n):** Stores variable-length strings of characters, up to 'n' characters (e.g., "Hello World", "Nepal").</li>
+                    <li>**CHAR(n):** Stores fixed-length strings of characters, padding with spaces if the string is shorter than 'n' (e.g., "A", "XYZ").</li>
+                    <li>**TEXT:** Stores longer strings of text.</li>
+                  </ul>
+                </li>
+                <li>**Date and Time Data Types:**
+                  <ul>
+                    <li>**DATE:** Stores dates (YYYY-MM-DD) (e.g., '2025-06-22').</li>
+                    <li>**TIME:** Stores times (HH:MM:SS) (e.g., '14:30:00').</li>
+                    <li>**DATETIME/TIMESTAMP:** Stores both date and time (e.g., '2025-06-22 14:30:00').</li>
+                  </ul>
+                </li>
+                <li>**Boolean Data Type:**
+                  <ul>
+                    <li>**BOOLEAN/TINYINT(1):** Stores true/false or 1/0 values.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="toggle-btn">Database</span>
+        <div class="content-section">
+          <h3>What is a Database?</h3>
+          <p>A **database** is a structured collection of related data, organized in a way that allows for efficient storage, retrieval, and management. It's designed to store vast amounts of information and provide quick access to specific data. Databases are essential for almost all modern applications, from e-commerce websites to banking systems.</p>
+          <p>Think of it as an organized digital filing cabinet where you can easily find, add, update, and delete information.</p>
+        </div>
+        <ul>
+          <li>
+            <span class="toggle-btn">Types of Database</span>
+            <div class="content-section">
+              <h3>Types of Databases</h3>
+              <p>Databases are categorized based on their underlying data model or structure. Here are some common types:</p>
+              <ul>
+                <li>**Relational Databases (RDBMS):**
+                  <p>These are the most common type. Data is organized into tables (relations) with rows and columns. Each table has a unique key, and relationships between tables are established using foreign keys. SQL (Structured Query Language) is used to manage and query relational databases.</p>
+                  <p><em>Examples: MySQL, PostgreSQL, Oracle, SQL Server.</em></p>
+                </li>
+                <li>**NoSQL Databases:**
+                  <p>NoSQL (Not Only SQL) databases provide alternative mechanisms for storing and retrieving data that are not tabular. They are often used for handling large volumes of unstructured or semi-structured data, and for applications requiring high scalability and flexibility.</p>
+                  <p><em>Examples: MongoDB (Document-oriented), Cassandra (Column-oriented), Redis (Key-Value), Neo4j (Graph).</em></p>
+                </li>
+                <li>**Object-Oriented Databases:**
+                  <p>Data is stored as objects, similar to objects in object-oriented programming languages. They are less common than RDBMS or NoSQL databases.</p>
+                </li>
+                <li>**Hierarchical Databases:**
+                  <p>Data is organized in a tree-like structure, with parent-child relationships. An older type of database, less flexible than relational databases.</p>
+                </li>
+                <li>**Network Databases:**
+                  <p>Similar to hierarchical but allow a more complex network structure where a child can have multiple parents. Also an older type.</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="toggle-btn">Software/System (Specially domain specific software)</span>
+        <div class="content-section">
+          <h3>Domain-Specific Software/Systems</h3>
+          <p>**Domain-specific software** refers to applications designed to meet the specific needs and processes of a particular industry or business area (a "domain"). Unlike general-purpose software (like a word processor), these systems are highly tailored to perform tasks relevant to their specific field, often integrating database functionalities.</p>
+        </div>
+        <ul>
+          <li>
+            <span class="toggle-btn">Database Management System</span>
+            <div class="content-section">
+              <h3>What is a Database Management System (DBMS)?</h3>
+              <p>A **Database Management System (DBMS)** is a software system that allows users to define, create, maintain, and control access to a database. It acts as an interface between the user/applications and the database itself. A DBMS simplifies data management by providing tools for:</p>
+              <ul>
+                <li>**Data Definition:** Defining the structure of the database (tables, columns, data types).</li>
+                <li>**Data Manipulation:** Adding, updating, deleting, and retrieving data.</li>
+                <li>**Data Control:** Managing user access, security, and concurrency.</li>
+                <li>**Data Integrity:** Ensuring the accuracy and consistency of data.</li>
+              </ul>
+              <p>Without a DBMS, managing large datasets would be incredibly complex and error-prone.</p>
+              <p><em>Examples: MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database, MongoDB.</em></p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Accounting System</span>
+            <div class="content-section">
+              <h3>What is an Accounting System?</h3>
+              <p>An **accounting system** is a domain-specific software designed to record, process, and report financial transactions of a business. It automates tasks like managing ledgers, generating invoices, tracking expenses, processing payroll, and producing financial statements (e.g., balance sheets, income statements). These systems heavily rely on databases to store all financial data accurately and securely.</p>
+              <p><em>Examples: Tally, QuickBooks, SAP ERP (for accounting modules).</em></p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Attendance System</span>
+            <div class="content-section">
+              <h3>What is an Attendance System?</h3>
+              <p>An **attendance system** is a domain-specific software used to track and manage the attendance of employees or students. It can record time-in and time-out, calculate working hours, manage leaves, and generate attendance reports. These systems often integrate with biometric devices (fingerprint, facial recognition) or card readers to automate data collection, and they use databases to store all attendance records.</p>
+              <p><em>Examples: Biometric attendance software, School/College management systems with attendance modules.</em></p>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="toggle-btn">Tools</span>
+        <div class="content-section">
+          <h3>Database Tools</h3>
+          <p>**Database tools** are software applications or components that assist developers, administrators, and users in interacting with, managing, and developing databases more efficiently. These tools range from servers that host databases to languages and utilities for querying and maintaining data.</p>
+        </div>
+        <ul>
+          <li>
+            <span class="toggle-btn">Server (XAMP Server)</span>
+            <div class="content-section">
+              <h3>What is a Server (XAMPP Server)?</h3>
+              <p>In the context of web development and databases, a **server** is a computer program or device that provides functionality for other programs or devices, called "clients." For databases, a database server hosts the database and allows clients (e.g., web applications, desktop programs) to connect and interact with it.</p>
+              <p>**XAMPP** is a popular, free, and open-source cross-platform web server solution stack. It stands for:</p>
+              <ul>
+                <li>**X** (Cross-platform): Works on Windows, macOS, Linux.</li>
+                <li>**A**pache: The web server software.</li>
+                <li>**M**ySQL/MariaDB: The relational database management system.</li>
+                <li>**P**HP: A popular server-side scripting language.</li>
+                <li>**P**erl: Another scripting language.</li>
+              </ul>
+              <p>XAMPP provides a convenient local environment for developers to test websites and database applications without needing a live internet server. It includes Apache (for serving web pages) and MySQL (for database functionalities).</p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">SQL (Structured Query Language)</span>
+            <div class="content-section">
+              <h3>What is SQL (Structured Query Language)?</h3>
+              <p>**SQL (Structured Query Language)** is the standard language for managing and manipulating relational databases. It's used to communicate with a database to perform tasks like creating tables, inserting data, retrieving specific information, updating records, and deleting data. SQL is declarative, meaning you describe *what* you want to achieve, and the database figures out *how* to do it.</p>
+            </div>
+            <ul>
+              <li>
+                <span class="toggle-btn">DDL (Data Definition Language)</span>
+                <div class="content-section">
+                  <h3>DDL (Data Definition Language)</h3>
+                  <p>**DDL** commands are used to define, modify, and delete the structure of database objects (like tables, indexes, views). They deal with the schema of the database.</p>
+                  <p><em>Common DDL Commands:</em></p>
+                  <ul>
+                    <li>**CREATE:** Used to create database objects (e.g., `CREATE TABLE`, `CREATE DATABASE`).</li>
+                    <li>**ALTER:** Used to modify the structure of existing database objects (e.g., `ALTER TABLE ADD COLUMN`).</li>
+                    <li>**DROP:** Used to delete existing database objects (e.g., `DROP TABLE`, `DROP DATABASE`).</li>
+                    <li>**TRUNCATE:** Used to remove all records from a table, but keeps the table structure (faster than DELETE for clearing all rows).</li>
+                    <li>**RENAME:** Used to rename an object.</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="toggle-btn">DML (Data Manipulation Language)</span>
+                <div class="content-section">
+                  <h3>DML (Data Manipulation Language)</h3>
+                  <p>**DML** commands are used for managing data within schema objects. They deal with the data itself.</p>
+                  <p><em>Common DML Commands:</em></p>
+                  <ul>
+                    <li>**INSERT:** Used to add new rows (records) into a table (e.g., `INSERT INTO Customers (Name, Age) VALUES ('John Doe', 30)`).</li>
+                    <li>**UPDATE:** Used to modify existing data in a table (e.g., `UPDATE Customers SET Age = 31 WHERE Name = 'John Doe'`).</li>
+                    <li>**DELETE:** Used to remove rows from a table (e.g., `DELETE FROM Customers WHERE Age < 25`).</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="toggle-btn">DQL (Data Query Language)</span>
+                <div class="content-section">
+                  <h3>DQL (Data Query Language)</h3>
+                  <p>**DQL** commands are used for retrieving data from the database. Technically, `SELECT` is the primary DQL command.</p>
+                  <p><em>Common DQL Commands:</em></p>
+                  <ul>
+                    <li>**SELECT:** Used to retrieve data from one or more tables (e.g., `SELECT * FROM Customers`, `SELECT Name, Age FROM Students WHERE City = 'Kathmandu'`).</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="toggle-btn">DCL (Data Control Language)</span>
+                <div class="content-section">
+                  <h3>DCL (Data Control Language)</h3>
+                  <p>**DCL** commands are used to control access to the database by managing user permissions and rights.</p>
+                  <p><em>Common DCL Commands:</em></p>
+                  <ul>
+                    <li>**GRANT:** Used to give user access privileges to a database or specific objects (e.g., `GRANT SELECT, INSERT ON Employees TO user1`).</li>
+                    <li>**REVOKE:** Used to remove user access privileges (e.g., `REVOKE DELETE ON Products FROM user2`).</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="toggle-btn">SQL Joins</span>
+                <div class="content-section">
+                  <h3>SQL Joins</h3>
+                  <p>**SQL Joins** are used to combine rows from two or more tables based on a related column between them. Joins are crucial for retrieving meaningful data from relational databases where information is often spread across multiple linked tables.</p>
+                  <p><em>Common Types of Joins:</em></p>
+                  <ul>
+                    <li>**INNER JOIN:** Returns rows when there is a match in both tables. This is the most common type of join.</li>
+                    <li>**LEFT (OUTER) JOIN:** Returns all rows from the left table, and the matching rows from the right table. If there is no match, NULL values are returned for columns from the right table.</li>
+                    <li>**RIGHT (OUTER) JOIN:** Returns all rows from the right table, and the matching rows from the left table. If there is no match, NULL values are returned for columns from the left table.</li>
+                    <li>**FULL (OUTER) JOIN:** Returns all rows when there is a match in one of the tables. If there is no match, NULL values are returned for columns from the table that doesn't have a match.</li>
+                  </ul>
+                  <p><em>Example:</em> Joining an `Orders` table with a `Customers` table on `CustomerID` to get order details along with customer names.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="toggle-btn">CRUD Operation</span>
+            <div class="content-section">
+              <h3>CRUD Operations (Create, Read, Update, Delete)</h3>
+              <p>**CRUD** is an acronym that stands for **Create, Read, Update, and Delete**. These are the four basic functions that are considered necessary to persist and manage data in a database. Almost every application that interacts with a database performs some combination of these operations.</p>
+              <ul>
+                <li>**C - Create:** Corresponds to the **INSERT** SQL command. It's about adding new data records to the database.</li>
+                <li>**R - Read:** Corresponds to the **SELECT** SQL command. It's about retrieving data from the database.</li>
+                <li>**U - Update:** Corresponds to the **UPDATE** SQL command. It's about modifying existing data records in the database.</li>
+                <li>**D - Delete:** Corresponds to the **DELETE** SQL command. It's about removing data records from the database.</li>
+              </ul>
+              <p>Understanding CRUD operations is fundamental to database interaction and application development.</p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Keys in Database</span>
+            <div class="content-section">
+              <h3>Keys in Database</h3>
+              <p>**Keys** are fundamental attributes or sets of attributes that are used to uniquely identify records (tuples) in a table and to establish relationships between tables in a relational database. They play a crucial role in maintaining data integrity and enabling efficient data retrieval.</p>
+              <p><em>Important Types of Keys:</em></p>
+              <ul>
+                <li>**Primary Key:**
+                  <p>A column or set of columns that uniquely identifies each row in a table. A table can have only one primary key. It must contain unique values and cannot contain NULL values.</p>
+                  <p><em>Example: `StudentID` in a `Students` table, `ProductID` in a `Products` table.</em></p>
+                </li>
+                <li>**Foreign Key:**
+                  <p>A column or set of columns in one table that refers to the primary key of another table. Foreign keys establish a link or relationship between two tables, ensuring referential integrity.</p>
+                  <p><em>Example: `CustomerID` in an `Orders` table referring to the `CustomerID` (primary key) in a `Customers` table.</em></p>
+                </li>
+                <li>**Candidate Key:**
+                  <p>A superkey for which no proper subset is a superkey. It's a minimal set of attributes that can uniquely identify a row. A table can have multiple candidate keys, and one of them is chosen as the primary key.</p>
+                  <p><em>Example: Both `StudentID` and `PassportNumber` could be candidate keys for a `Students` table if both are unique.</em></p>
+                </li>
+                <li>**Super Key:**
+                  <p>A set of one or more attributes that, taken collectively, can uniquely identify a row in a table.</p>
+                  <p><em>Example: If `StudentID` is a primary key, then `(StudentID, Name)` is a super key.</em></p>
+                </li>
+                <li>**Alternate Key:**
+                  <p>A candidate key that is not chosen as the primary key.</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Constraints in Database</span>
+            <div class="content-section">
+              <h3>Constraints in Database</h3>
+              <p>**Database constraints** are rules enforced on data columns of a table to limit the type of data that can be entered into it. They are used to ensure the accuracy and reliability of data in the database, maintaining data integrity.</p>
+              <p><em>Common Types of Constraints:</em></p>
+              <ul>
+                <li>**NOT NULL:** Ensures that a column cannot have a NULL value.</li>
+                <li>**UNIQUE:** Ensures that all values in a column are different. A table can have multiple UNIQUE constraints.</li>
+                <li>**PRIMARY KEY:** A combination of NOT NULL and UNIQUE. Uniquely identifies each record in a table. (Discussed above)</li>
+                <li>**FOREIGN KEY:** Ensures referential integrity between two tables. (Discussed above)</li>
+                <li>**CHECK:** Ensures that all values in a column satisfy a specific condition (e.g., `CHECK (Age >= 18)`).</li>
+                <li>**DEFAULT:** Sets a default value for a column when no value is specified during an INSERT operation.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Anomolies in Database</span>
+            <div class="content-section">
+              <h3>Anomalies in Database</h3>
+              <p>**Database anomalies** are flaws or inconsistencies that can arise in a database when data is not properly organized or normalized. They typically occur in poorly designed tables where redundant data exists. Anomalies lead to data inconsistency and make database management difficult.</p>
+              <p><em>Common Types of Anomalies:</em></p>
+              <ul>
+                <li>**Insertion Anomaly:**
+                  <p>Occurs when you cannot insert a new record into a table without also inserting information about something else that is not yet fully available or relevant.</p>
+                  <p><em>Example: In a table storing student details and their enrolled courses, you might not be able to add a new course until a student enrolls in it, or you can't add a student without assigning them to a course.</em></p>
+                </li>
+                <li>**Deletion Anomaly:**
+                  <p>Occurs when deleting a record results in the loss of other, seemingly unrelated, information that is still needed.</p>
+                  <p><em>Example: If you delete the last student enrolled in a particular course from a combined student-course table, you might unintentionally delete all information about that course.</em></p>
+                </li>
+                <li>**Update Anomaly:**
+                  <p>Occurs when a change to one data item requires multiple updates to maintain consistency across the database, and if all copies are not updated, data inconsistency arises.</p>
+                  <p><em>Example: If a professor's department name is stored multiple times for each course they teach, changing their department requires updating multiple records. Failure to update all instances leads to inconsistent data.</em></p>
+                </li>
+              </ul>
+              <p>These anomalies are primarily addressed through database normalization.</p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Normalization in Database</span>
+            <div class="content-section">
+              <h3>Normalization in Database</h3>
+              <p>**Normalization** is a systematic process of organizing the columns and tables of a relational database to minimize data redundancy and improve data integrity. The goal of normalization is to decompose larger, "badly" structured tables into smaller, "well-structured" tables without losing any information.</p>
+              <p>It involves a series of guidelines called **Normal Forms (NF)**. The most commonly used normal forms are:</p>
+              <ul>
+                <li>**First Normal Form (1NF):**
+                  <p>Eliminates repeating groups/attributes. Each column must contain atomic (single, indivisible) values, and each row must be unique.</p>
+                </li>
+                <li>**Second Normal Form (2NF):**
+                  <p>Must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key. (Eliminates partial dependencies).</p>
+                </li>
+                <li>**Third Normal Form (3NF):**
+                  <p>Must be in 2NF and eliminate transitive dependencies. No non-key attribute should be functionally dependent on another non-key attribute.</p>
+                </li>
+                <li>**Boyce-Codd Normal Form (BCNF):**
+                  <p>A stronger version of 3NF. It addresses certain types of anomalies not covered by 3NF, particularly when a table has multiple overlapping candidate keys.</p>
+                </li>
+              </ul>
+              <p>Normalization helps to avoid anomalies, reduce storage space, and make the database more flexible and easier to maintain.</p>
+            </div>
+          </li>
+          <li>
+            <span class="toggle-btn">Database Security</span>
+            <div class="content-section">
+              <h3>Database Security</h3>
+              <p>**Database security** refers to the comprehensive measures taken to protect the database and its contents from unauthorized access, malicious attacks, corruption, or data loss. It's crucial for maintaining the confidentiality, integrity, and availability (CIA triad) of an organization's data.</p>
+              <p><em>Key Aspects of Database Security:</em></p>
+              <ul>
+                <li>**Access Control:**
+                  <p>Restricting who can access the database and what actions they can perform (e.g., read, write, update, delete). This involves user authentication (verifying identity) and authorization (granting specific permissions).</p>
+                </li>
+                <li>**Encryption:**
+                  <p>Converting data into a coded format to prevent unauthorized access. Data can be encrypted at rest (when stored) and in transit (when being transmitted).</p>
+                </li>
+                <li>**Auditing and Monitoring:**
+                  <p>Tracking and logging all database activities to detect suspicious behavior, identify potential breaches, and ensure compliance.</p>
+                </li>
+                <li>**Backup and Recovery:**
+                  <p>Creating copies of the database to restore it in case of data loss due to hardware failure, corruption, or accidental deletion.</p>
+                </li>
+                <li>**Data Masking/Obfuscation:**
+                  <p>Hiding original data with random characters or other data to protect sensitive information while still allowing for testing or development.</p>
+                </li>
+                <li>**Firewalls and Network Security:**
+                  <p>Protecting the network perimeter and the database server from external threats.</p>
+                </li>
+                <li>**Regular Security Updates:**
+                  <p>Applying patches and updates to the DBMS software to fix known vulnerabilities.</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </main>
+
+  <script>
+    // Attach click handlers to all toggle buttons
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const section = btn.nextElementSibling;
+        section.style.display = section.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
